@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attendance Dashboard | Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background: #f1f5f9; padding: 40px; }
+        .container { background: white; padding: 30px; border-radius: 18px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        
+        .top-section { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+        .date-badge { background: #08142f; color: white; padding: 8px 16px; border-radius: 20px; font-size: 14px; }
+        
+        table { width: 100%; border-collapse: collapse; }
+        th { background: #f8fafc; color: #475569; padding: 16px; text-align: left; font-weight: 600; border-bottom: 2px solid #e2e8f0; }
+        td { padding: 16px; border-bottom: 1px solid #f1f5f9; }
+        
+        .action-btns { display: flex; gap: 10px; }
+        .btn { padding: 6px 16px; border: 1px solid #e2e8f0; border-radius: 8px; cursor: pointer; transition: 0.3s; background: white; font-size: 13px; }
+        
+        /* Interactive States */
+        .btn.present.active { background: #22c55e; color: white; border-color: #22c55e; }
+        .btn.absent.active { background: #ef4444; color: white; border-color: #ef4444; }
+        
+        .save-btn { background: #2563eb; color: white; padding: 12px 30px; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; margin-top: 20px; width: 100%; }
+        .save-btn:hover { background: #1d4ed8; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="top-section">
+            <h2>Student Attendance</h2>
+            <div class="date-badge">📅 24/06/2026</div>
+        </div>
+
+        <table>
+            <thead>
+                <tr><th>Student Name</th><th>Roll No</th><th>Mark Attendance</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rohan Naik</td><td>101</td>
+                    <td class="action-btns">
+                        <button class="btn present" onclick="mark(this, 'present')">Present</button>
+                        <button class="btn absent" onclick="mark(this, 'absent')">Absent</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Snehal Patil</td><td>102</td>
+                    <td class="action-btns">
+                        <button class="btn present" onclick="mark(this, 'present')">Present</button>
+                        <button class="btn absent" onclick="mark(this, 'absent')">Absent</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="save-btn">Save Attendance</button>
+    </div>
+
+    <script>
+        function mark(btn, type) {
+            // सर्व बटणे Reset करा
+            let parent = btn.parentElement;
+            parent.querySelectorAll('.btn').forEach(b => b.classList.remove('active'));
+            // निवडलेल्या बटणाला Active करा
+            btn.classList.add('active');
+        }
+    </script>
+</body>
+</html>
