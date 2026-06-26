@@ -1,64 +1,68 @@
 # Institution Management Portal 🎓
+> A full-stack web application designed to automate institutional administration, including admissions, course management, and fee processing.
 
-### 🚀 Overview
-A robust, modular Full-Stack Web Application designed to streamline institutional operations. This portal automates the student lifecycle—from admission and course management to fee processing and faculty tracking. Built with a focus on clean MVC architecture and fundamental web development principles.
-
----
-
-### 🛠 Tech Stack
-* **Backend:** Java (Jakarta EE), Servlets, JDBC
-* **Frontend:** HTML5, CSS3, JavaScript (ES6)
-* **Database:** MySQL
-* **Server:** Apache Tomcat 10+
-* **Development Tools:** VS Code, Git, MySQL Workbench
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Apache Tomcat](https://img.shields.io/badge/Apache%20Tomcat-F8DC75?style=for-the-badge&logo=apache-tomcat&logoColor=black)
 
 ---
 
-### 🏗 System Architecture
-The application follows the **MVC (Model-View-Controller)** pattern:
-* **Model:** Handles data persistence and database connectivity via JDBC.
-* **View:** Responsive user interface built with HTML5, CSS3, and JavaScript.
-* **Controller:** Java Servlets manage HTTP requests, business logic, and routing.
+## 📑 Table of Contents
+* [Overview](#-overview)
+* [Key Features](#-key-features)
+* [System Architecture](#-how-it-works)
+* [Project Preview](#-project-preview)
+* [Getting Started](#-how-to-run-it-locally)
 
 ---
 
-### 💡 Key Features
-* **Admin Dashboard:** Real-time metrics for admissions, faculty, and institutional growth.
-* **Admission Management:** Efficient tracking of new student enrollments.
-* **Financial Oversight:** Fee tracking and automated receipt processing.
-* **Academic Tracking:** Faculty and Course management systems.
-* **Secure Authentication:** Dedicated Admin and User access control.
+## 🚀 Overview
+Managing institutional records manually is time-consuming and prone to errors. This portal simplifies the entire student lifecycle. It offers a secure platform for student admissions, course tracking, and fee management, providing a unified dashboard for both Admins and Students.
 
 ---
 
-### 📸 Project Preview
-
-#### **Student & Authentication Interface**
-| Home | Student Register | Student Dashboard | Admission Form | Payment Receipt | Admin Register |
-| :---: | :---: | :---: | :---: | :---: | :---: |
-| ![Home](ScreenShots/Home.png) | ![Register](ScreenShots/Student_register.png) | ![Student DB](ScreenShots/Student_dashboard.png) | ![Admission](ScreenShots/Admission_form.png) | ![Payment](ScreenShots/Payment_receiept.png) | ![Admin Reg](ScreenShots/Admin_login.png) |
-
-
-#### **Admin Dashboard & Management**
-| Dashboard | Admission Management | Faculty Portal | Course Management |
-| :---: | :---: | :---: | :---: |
-| ![Dashboard](ScreenShots/Admin_dashboard.png) | ![Admissions](ScreenShots/Student_m.png) | ![Faculty](ScreenShots/Faculty_m.png) | ![Courses](ScreenShots/Courses_m.png) |
+## 💡 Key Features
+* **👨‍💻 Admin Dashboard:** Real-time metrics for student admissions, faculty records, and course management.
+* **🎓 Admission Lifecycle:** End-to-end management of student applications and enrollment.
+* **💰 Financial Tracking:** Automated fee processing and receipt generation.
+* **📚 Academic Control:** Easy management of faculty details and course curriculum.
+* **🔒 Secure Access:** Role-based authentication for both Admins and Students.
 
 ---
 
-### 🚀 Getting Started
-1. **Clone the repository:** `git clone https://github.com/your-username/institution-portal.git`
-2. **Database Setup:** Import the SQL schema provided in the project into MySQL.
-3. **Configuration:** Update the `DBConnection.java` file with your local MySQL username and password.
-4. **Deployment:** Deploy the project on Apache Tomcat 10+ server.
-5. **Access:** Navigate to `http://localhost:8080/studentportal/index.html` in your web browser.
+## 🏗 How it works
+* **UI Layer:** HTML/JSP pages providing a responsive and modern interface.
+* **Logic Layer:** Java Servlets manage user requests, business logic, and session control.
+* **Database Layer:** JDBC connects the application to MySQL, ensuring all academic data is stored securely.
 
 ---
 
-### 👨‍💻 Developed By
-**Rohan Naik** *Full-Stack Java Developer* [LinkedIn Profile](https://www.linkedin.com/in/rohannaik06) | [Email](mailto:rohannaik1426@gmail.com)
+## 📸 Project Preview
+
+### **Student Experience**
+| Home | Register | Dashboard | Admission Form | Payment Receipt | 
+| :---: | :---: | :---: | :---: | :---: |
+| ![Home](ScreenShots/Home.png) | ![Register](ScreenShots/Student_register.png) | ![Dashboard](ScreenShots/Student_dashboard.png) | ![Admission](ScreenShots/Admission_form.png) | ![Payment](ScreenShots/Payment_receiept.png) |
+
+### **Admin Dashboard & Management**
+| Admin Register | Dashboard | Admissions | Faculty Portal | Courses |
+| :---: | :---: | :---: | :---: | :---: |
+| ![Admin Reg](ScreenShots/Admin_login.png) | ![Dashboard](ScreenShots/Admin_dashboard.png) | ![Admissions](ScreenShots/Student_m.png) | ![Faculty](ScreenShots/Faculty_m.png) | ![Courses](ScreenShots/Courses_m.png) | 
 
 ---
 
-### 📌 Development Note
-This project was developed as a proof-of-concept to master the fundamentals of **Jakarta EE** and **Servlet life-cycle** before transitioning to enterprise frameworks like Spring Boot. It highlights core competency in backend logic, database management, and professional UI design.
+## 🚀 How to Run It Locally
+1. **Clone:** `git clone https://github.com/your-username/institution-portal.git`
+2. **Database:** Create a database named `institution_db` in MySQL and run the provided SQL schema.
+3. **Configure:** Update your DB credentials in the `DBConnection.java` file.
+4. **Deploy:** Import the project into your IDE and deploy on Apache Tomcat.
+5. **Launch:** Access `http://localhost:8080/studentportal/index.html`
+
+---
+
+## 👨‍💻 Developed By
+**Rohan Naik** | [LinkedIn](https://www.linkedin.com/in/rohannaik06) | [Email](mailto:rohannaik1426@gmail.com)
+*Built as an academic project for Java Web Technologies.*
